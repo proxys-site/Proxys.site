@@ -1,0 +1,250 @@
+{
+  "title": "Proxys.Site",
+  "description": "Find the Perfect Proxy for Your Needs",
+  "url": "https://proxys.site",
+  "header": {
+    "announcement": "🛡️ Secure Your Online Presence with Premium Proxy Solutions 🛡️"
+  },
+  "headerAd": {
+    "enabled": false,
+    "url": "",
+    "text": ""
+  },
+  "homepage": {
+    "hero": {
+      "title": "Find the Perfect Proxy for Your Needs",
+      "subtitle": "Compare top proxy providers and find the best solution for your requirements"
+    }
+  },
+  "residentialSidebar": {
+    "title": "About Residential Proxies",
+    "subtitle": "Top recommended residential proxies services:",
+    "description": "Residential proxies use real IP addresses from ISPs, perfect for web scraping and accessing geo-restricted content.",
+    "benefits": [
+      "Real residential IP addresses",
+      "High anonymity and trust",
+      "Perfect for web scraping",
+      "Access geo-restricted content",
+      "Bypass IP blocks easily"
+    ],
+    "useCases": [
+      "Web scraping and data collection",
+      "E-commerce price monitoring",
+      "Social media management",
+      "Ad verification",
+      "Market research"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "datacenterSidebar": {
+    "title": "About Datacenter Proxies",
+    "subtitle": "Top recommended datacenter proxies services:",
+    "description": "Datacenter proxies offer high-speed connections from data centers, ideal for bulk operations and high-volume tasks.",
+    "benefits": [
+      "Ultra-fast connection speeds",
+      "Cost-effective solution",
+      "High bandwidth availability",
+      "Reliable uptime",
+      "Great for bulk operations"
+    ],
+    "useCases": [
+      "High-volume web scraping",
+      "SEO monitoring",
+      "Bulk account creation",
+      "Fast data collection",
+      "Automated testing"
+    ],
+    "imageAlt": "",
+    "image": ""
+  },
+  "mobileSidebar": {
+    "title": "About Mobile Proxies",
+    "subtitle": "Top recommended mobile proxies services:",
+    "description": "Mobile proxies use cellular network IPs, excellent for mobile app testing and location-specific content access.",
+    "benefits": [
+      "Highest level of anonymity",
+      "Real mobile carrier IPs",
+      "Perfect for mobile testing",
+      "Bypass restrictive sites",
+      "Social media automation"
+    ],
+    "useCases": [
+      "E-commerce testing",
+      "Social media management",
+      "Ad verification",
+      "Mobile advertising",
+      "Accessing mobile content"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "anonymousSidebar": {
+    "title": "About Anonymous Proxies",
+    "subtitle": "Top recommended anonymous proxies services:",
+    "description": "Anonymous proxies hide your identity while browsing, providing privacy and security for sensitive operations.",
+    "benefits": [
+      "Complete anonymity online",
+      "Hide your real IP address",
+      "Secure browsing",
+      "Privacy protection",
+      "Bypass censorship"
+    ],
+    "useCases": [
+      "Private browsing",
+      "Accessing blocked content",
+      "Secure communications",
+      "Anonymous research",
+      "Privacy-focused activities"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "gamingSidebar": {
+    "title": "About Gaming Proxies",
+    "subtitle": "Top recommended gaming proxies services:",
+    "description": "Gaming proxies provide low-latency connections for online gaming, reducing lag and improving performance.",
+    "benefits": [
+      "Low latency connections",
+      "Reduce gaming lag",
+      "Access region-locked games",
+      "DDoS protection",
+      "Stable gaming experience"
+    ],
+    "useCases": [
+      "Online multiplayer gaming",
+      "Access geo-restricted games",
+      "Reduce ping and latency",
+      "Bypass IP bans",
+      "Competitive gaming"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "streamingSidebar": {
+    "title": "About Streaming Proxies",
+    "subtitle": "Top recommended streaming proxies services:",
+    "description": "Streaming proxies help you access geo-restricted content from streaming platforms worldwide.",
+    "benefits": [
+      "Access geo-blocked content",
+      "High-speed streaming",
+      "Multiple location options",
+      "Bypass streaming restrictions",
+      "HD quality support"
+    ],
+    "useCases": [
+      "Watch region-locked shows",
+      "Access international content",
+      "Bypass streaming blocks",
+      "Multiple streaming accounts",
+      "Content availability testing"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "businessSidebar": {
+    "title": "About Business Proxies",
+    "subtitle": "Top recommended business proxies services:",
+    "description": "Business proxies provide enterprise-grade solutions for corporate needs with dedicated support.",
+    "benefits": [
+      "Enterprise-grade reliability",
+      "Dedicated support team",
+      "Custom solutions available",
+      "High security standards",
+      "Scalable infrastructure"
+    ],
+    "useCases": [
+      "Corporate data collection",
+      "Market intelligence",
+      "Competitor analysis",
+      "Brand protection",
+      "Enterprise automation"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "privacySidebar": {
+    "title": "About Privacy Proxies",
+    "subtitle": "Top recommended privacy proxies services:",
+    "description": "Privacy proxies focus on protecting your personal data and online identity with maximum security.",
+    "benefits": [
+      "Maximum privacy protection",
+      "No-logs policy",
+      "Encrypted connections",
+      "Identity protection",
+      "Secure browsing"
+    ],
+    "useCases": [
+      "Private communications",
+      "Sensitive research",
+      "Whistleblowing",
+      "Journalism",
+      "Personal privacy"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "vpnSidebar": {
+    "title": "About VPN Proxies",
+    "subtitle": "Top recommended VPN proxies services:",
+    "description": "VPN proxies combine the benefits of VPNs and proxies for enhanced security and flexibility.",
+    "benefits": [
+      "Combined VPN and proxy benefits",
+      "Enhanced security",
+      "Flexible configuration",
+      "Multiple protocols",
+      "Global server network"
+    ],
+    "useCases": [
+      "Secure remote access",
+      "Privacy and anonymity",
+      "Bypass restrictions",
+      "Secure file sharing",
+      "Protected browsing"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "freeSidebar": {
+    "title": "About Free Proxy Sites",
+    "subtitle": "Top recommended free proxy sites:",
+    "description": "Free proxy sites offer basic proxy services at no cost, perfect for occasional use and testing.",
+    "benefits": [
+      "No cost to use",
+      "Easy to access",
+      "No registration required",
+      "Quick setup",
+      "Good for testing"
+    ],
+    "useCases": [
+      "Occasional browsing",
+      "Testing proxy functionality",
+      "Basic anonymity needs",
+      "Accessing blocked sites",
+      "Learning about proxies"
+    ],
+    "image": "",
+    "imageAlt": ""
+  },
+  "proxyBrowserSidebar": {
+    "title": "About Proxy Browsers",
+    "subtitle": "Top recommended proxy browser (antidetect) services:",
+    "description": "Antidetect browsers help you manage multiple accounts with unique browser fingerprints, preventing detection and bans.",
+    "benefits": [
+      "Unique browser fingerprints",
+      "Multi-account management",
+      "Team collaboration features",
+      "Built-in proxy integration",
+      "Automation capabilities"
+    ],
+    "useCases": [
+      "Managing multiple social media accounts",
+      "E-commerce multi-store operations",
+      "Affiliate marketing campaigns",
+      "Web scraping with different identities",
+      "Ad verification and testing"
+    ],
+    "image": "",
+    "imageAlt": ""
+  }
+}

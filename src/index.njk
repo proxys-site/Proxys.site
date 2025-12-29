@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: Proxys.Site - Find the Perfect Proxy
+animatedBorder: true
+---
+
+{% import "ads-section.njk" as adsSection %}
+
+<section class="bg-card-light dark:bg-card-dark p-4 sm:p-8 rounded-lg shadow-sm mb-12 text-center">
+    <h1 class="text-2xl sm:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
+      {{ site.homepage.hero.title }}
+    </h1>
+  <p class="text-subtext-light dark:text-subtext-dark">{{ home.hero.subtitle }}</p>
+</section>
+
+<section class="mb-12">
+  <h2 class="text-xl font-semibold mb-6 text-text-light dark:text-text-dark">{{ home.proxyTypesSection.title }}</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for type in proxies.proxyTypes %}
+    <a href="{{ type.url }}" class="{% if type.title == 'Proxy Detector' %}animated-border-card {% endif %}bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 block cursor-pointer">
+      <div class="flex items-center mb-3">
+        <span class="material-icons text-primary text-3xl">{{ type.icon }}</span>
+        <h3 class="text-lg font-semibold ml-3 text-text-light dark:text-text-dark">{{ type.title }}</h3>
+      </div>
+      <p class="text-subtext-light dark:text-subtext-dark">{{ type.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="mb-12">
+  <h2 class="text-2xl font-bold mb-6 text-center text-text-light dark:text-text-dark">{{ home.faqSection.title }}</h2>
+  <div class="space-y-4">
+    {% for faq in home.faqSection.faqs %}
+    <details class="bg-card-light dark:bg-card-dark p-4 rounded-lg shadow-sm">
+      <summary class="font-semibold cursor-pointer flex justify-between items-center text-text-light dark:text-text-dark">
+        {{ faq.question }}
+        <span class="material-icons">add</span>
+      </summary>
+      <p class="mt-2 text-subtext-light dark:text-subtext-dark">{{ faq.answer }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="mb-12">
+  <h2 class="text-2xl font-bold mb-6 text-center text-text-light dark:text-text-dark">{{ home.trustedProvidersSection.title }}</h2>
+  <div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
+      {% for provider in home.trustedProvidersSection.providers %}
+      <a href="{{ provider.url }}" target="_blank" rel="nofollow noopener" class="flex flex-col items-center justify-center group">
+        <img alt="{{ provider.name }} logo" class="h-10 mb-2 transition-transform group-hover:scale-110" src="{{ provider.logo }}"/>
+        <span class="text-xs text-center text-subtext-light dark:text-subtext-dark group-hover:text-primary transition-colors">{{ provider.name }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="text-2xl font-bold mb-6 text-center text-text-light dark:text-text-dark">{{ home.testimonialsSection.title }}</h2>
+  <div class="space-y-6">
+    {% for testimonial in home.testimonialsSection.testimonials %}
+    <div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm">
+      <p class="text-subtext-light dark:text-subtext-dark italic mb-4">"{{ testimonial.text }}"</p>
+      <p class="text-right font-semibold text-text-light dark:text-text-dark">- {{ testimonial.author }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>

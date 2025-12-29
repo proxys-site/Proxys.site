@@ -1,0 +1,192 @@
+---
+layout: base.njk
+title: Gaming Proxies - Proxys.Site
+permalink: /gaming-proxies.html
+---
+
+{% import "ads-section.njk" as adsSection %}
+
+<h1 class="text-2xl md:text-3xl font-bold mb-2 flex items-center">
+  <span class="material-icons text-primary mr-2 text-4xl">{{ proxies.pageContent.gamingProxies.icon }}</span>
+  {{ proxies.pageContent.gamingProxies.title }}
+</h1>
+<p class="text-subtext-light dark:text-subtext-dark mb-8">{{ proxies.pageContent.gamingProxies.subtitle }}</p>
+
+<!-- Ads Section -->
+{{ adsSection.renderAds(ads.gamingProxiesAds) }}
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+  <div class="lg:col-span-2 space-y-6">
+    {% if proxies.gamingProxies.length > 0 %}
+      {% for proxy in proxies.gamingProxies %}
+      <div class="bg-card-light dark:bg-card-dark p-4 sm:p-6 rounded-lg border border-border-light dark:border-border-dark">
+        <div class="flex flex-col sm:flex-row gap-6">
+          <div class="flex-shrink-0">
+            <img alt="{{ proxy.name }} logo" class="w-20 h-20 rounded" src="{{ proxy.logo }}"/>
+          </div>
+          <div class="flex-grow">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <h2 class="text-xl font-bold flex items-center gap-2">
+                  {{ proxy.name }}
+                  {% if proxy.verified %}
+                  <svg height="20" viewBox="0 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m512 268c0 17.9-4.3 34.5-12.9 49.7s-20.1 27.1-34.6 35.4c.4 2.7.6 6.9.6 12.6 0 27.1-9.1 50.1-27.1 69.1-18.1 19.1-39.9 28.6-65.4 28.6-11.4 0-22.3-2.1-32.6-6.3-8 16.4-19.5 29.6-34.6 39.7-15 10.2-31.5 15.2-49.4 15.2-18.3 0-34.9-4.9-49.7-14.9-14.9-9.9-26.3-23.2-34.3-40-10.3 4.2-21.1 6.3-32.6 6.3-25.5 0-47.4-9.5-65.7-28.6-18.3-19-27.4-42.1-27.4-69.1 0-3 .4-7.2 1.1-12.6-14.5-8.4-26-20.2-34.6-35.4-8.5-15.2-12.8-31.8-12.8-49.7 0-19 4.8-36.5 14.3-52.3s22.3-27.5 38.3-35.1c-4.2-11.4-6.3-22.9-6.3-34.3 0-27 9.1-50.1 27.4-69.1s40.2-28.6 65.7-28.6c11.4 0 22.3 2.1 32.6 6.3 8-16.4 19.5-29.6 34.6-39.7 15-10.1 31.5-15.2 49.4-15.2s34.4 5.1 49.4 15.1c15 10.1 26.6 23.3 34.6 39.7 10.3-4.2 21.1-6.3 32.6-6.3 25.5 0 47.3 9.5 65.4 28.6s27.1 42.1 27.1 69.1c0 12.6-1.9 24-5.7 34.3 16 7.6 28.8 19.3 38.3 35.1 9.5 15.9 14.3 33.4 14.3 52.4zm-266.9 77.1 105.7-158.3c2.7-4.2 3.5-8.8 2.6-13.7-1-4.9-3.5-8.8-7.7-11.4-4.2-2.7-8.8-3.6-13.7-2.9-5 .8-9 3.2-12 7.4l-93.1 140-42.9-42.8c-3.8-3.8-8.2-5.6-13.1-5.4-5 .2-9.3 2-13.1 5.4-3.4 3.4-5.1 7.7-5.1 12.9 0 5.1 1.7 9.4 5.1 12.9l58.9 58.9 2.9 2.3c3.4 2.3 6.9 3.4 10.3 3.4 6.7-.1 11.8-2.9 15.2-8.7z" fill="#1da1f2"></path></svg>
+                  {% endif %}
+                </h2>
+                <div class="flex items-center gap-1 text-yellow-400">
+                {% for i in range(0, 4) %}
+                <span class="material-icons text-sm">star</span>
+                {% endfor %}
+                <span class="material-icons text-sm">star_half</span>
+                <span class="text-subtext-light dark:text-subtext-dark ml-1">({{ proxy.rating }})</span>
+              </div>
+                {% if false %}
+                <span class="best-offer-badge">
+                  ⭐ Best Offer
+                </span>
+                {% endif %}
+              </div>
+            </div>
+            <p class="text-sm text-subtext-light dark:text-subtext-dark mt-1">{{ proxy.description }}</p>
+            <div class="mt-4 text-sm space-y-2">
+              <p><strong class="font-semibold">Best For:</strong> {{ proxy.bestFor }}</p>
+              <p><strong class="font-semibold">IP Pool:</strong> {{ proxy.ipPool }}</p>
+              <p><strong class="font-semibold">Trust Score:</strong> {{ proxy.trustScore }}</p>
+              <p><strong class="font-semibold">Locations:</strong> {{ proxy.locations }}</p>
+              {% if proxy.discountCode %}
+              <p><strong class="font-semibold text-green-600 dark:text-green-400">💰 Discount:</strong> <span class="discount-code-text">{{ proxy.discountCode }}</span></p>
+              {% endif %}
+              {% if proxy.pricing %}
+              <p><strong class="font-semibold text-blue-600 dark:text-blue-400">💵 Pricing:</strong> {{ proxy.pricing }}</p>
+              {% endif %}
+            </div>
+            <a class="mt-4 inline-block bg-primary text-white font-semibold py-2 px-6 rounded hover:bg-blue-600 transition-colors" href="{{ proxy.url }}" target="_blank" rel="nofollow noopener">Visit Site →</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+      <div class="bg-card-light dark:bg-card-dark p-4 sm:p-6 rounded-lg border border-border-light dark:border-border-dark">
+        <p class="text-center text-subtext-light dark:text-subtext-dark py-8">
+          No providers added yet. Use the admin app to add providers.
+        </p>
+      </div>
+    {% endif %}
+  </div>
+  
+  <aside class="space-y-4">
+    <div class="grid grid-cols-1 gap-3">
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/proxy-browser">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">public</span>
+        <span class="font-medium">Proxy Browser</span>
+      </a>
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/residential-proxies">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">home</span>
+        <span class="font-medium">Residential Proxies</span>
+      </a>
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/datacenter-proxies">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">storage</span>
+        <span class="font-medium">Datacenter Proxies</span>
+      </a>
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/mobile-proxies">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">phone_iphone</span>
+        <span class="font-medium">Mobile Proxies</span>
+      </a>
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/anonymous-proxies">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">visibility_off</span>
+        <span class="font-medium">Anonymous Proxies</span>
+      </a>
+      <a class="flex items-center p-3 bg-primary text-white rounded-lg border border-primary hover:shadow-lg transition-shadow text-sm" href="/gaming-proxies">
+        <span class="material-icons mr-2 text-xl">sports_esports</span>
+        <span class="font-medium">Gaming Proxies</span>
+      </a>
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/streaming-proxies">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">live_tv</span>
+        <span class="font-medium">Streaming Proxies</span>
+      </a>
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/business-proxies">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">business_center</span>
+        <span class="font-medium">Business Proxies</span>
+      </a>
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/privacy-proxies">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">privacy_tip</span>
+        <span class="font-medium">Privacy Proxies</span>
+      </a>
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/vpn-proxies">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">vpn_key</span>
+        <span class="font-medium">VPN Proxies</span>
+      </a>
+      <a class="flex items-center p-3 bg-card-light dark:bg-card-dark rounded-lg border border-border-light dark:border-border-dark hover:shadow-lg transition-shadow text-sm" href="/free-proxy-sites">
+        <span class="material-icons mr-2 text-subtext-light dark:text-subtext-dark text-xl">price_check</span>
+        <span class="font-medium">Free Proxy Sites</span>
+      </a>
+    </div>
+    {# Check if script exists, otherwise show image #}
+    {% if site.gamingSidebar.script %}
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg flex items-center justify-center sidebar-ad-container">
+      {{ site.gamingSidebar.script | safe }}
+    </div>
+    {% elif site.gamingSidebar.image %}
+    <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg flex items-center justify-center">
+      <img alt="{{ site.gamingSidebar.imageAlt or 'Advertisement' }}" class="max-w-full h-auto" src="{{ site.gamingSidebar.image }}"/>
+    </div>
+    {% endif %}
+  </aside>
+</div>
+
+{% if proxies.gamingProxies.length > 0 %}
+<div class="mt-12">
+  <h2 class="text-2xl font-bold mb-6">Comparison of Top Gaming Proxies Providers</h2>
+  <div class="overflow-x-auto">
+    <table class="w-full text-sm text-left text-subtext-light dark:text-subtext-dark">
+      <thead class="text-xs text-text-light dark:text-text-dark uppercase bg-gray-50 dark:bg-gray-700">
+        <tr>
+          <th class="px-6 py-3" scope="col">Provider</th>
+          <th class="px-6 py-3" scope="col">IP Pool</th>
+          <th class="px-6 py-3" scope="col">Success Rate</th>
+          <th class="px-6 py-3" scope="col">Locations</th>
+          <th class="px-6 py-3" scope="col">Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for proxy in proxies.gamingProxies %}
+        <tr class="bg-card-light dark:bg-card-dark border-b dark:border-gray-700{% if loop.last %} border-b-0{% endif %}">
+          <th class="px-6 py-4 font-bold whitespace-nowrap" scope="row">
+            <a href="{{ proxy.url }}" target="_blank" rel="nofollow noopener" class="text-blue-600 dark:text-yellow-500 hover:underline">
+              {{ proxy.name }}
+            </a>
+          </th>
+          <td class="px-6 py-4">{{ proxy.ipPool }}</td>
+          <td class="px-6 py-4">{{ proxy.trustScore }}</td>
+          <td class="px-6 py-4">{{ proxy.locations }}</td>
+          <td class="px-6 py-4">{{ proxy.rating }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+<div class="mt-12 bg-card-light dark:bg-card-dark p-6 rounded-lg border border-border-light dark:border-border-dark">
+  <h3 class="text-lg font-bold mb-4">{{ site.gamingSidebar.title or "About Gaming Proxies" }}</h3>
+  <p class="text-sm text-subtext-light dark:text-subtext-dark leading-relaxed">
+    {{ site.gamingSidebar.description or "Information about gaming proxies." }}
+  </p>
+  {% if site.gamingSidebar.benefits %}
+  <h4 class="font-semibold mt-4 mb-2">Key Benefits</h4>
+  <ul class="list-disc list-inside text-sm text-subtext-light dark:text-subtext-dark space-y-1">
+    {% for benefit in site.gamingSidebar.benefits %}
+    <li>{{ benefit }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% if site.gamingSidebar.useCases %}
+  <h4 class="font-semibold mt-4 mb-2">Best Use Cases</h4>
+  <ul class="list-disc list-inside text-sm text-subtext-light dark:text-subtext-dark space-y-1">
+    {% for useCase in site.gamingSidebar.useCases %}
+    <li>{{ useCase }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

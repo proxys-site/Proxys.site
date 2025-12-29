@@ -1,0 +1,199 @@
+{
+  "hero": {
+    "title": "Proxy & VPN Detector",
+    "subtitle": "Check if your current connection is using a proxy, VPN, or Tor network"
+  },
+  "buttons": {
+    "detectButton": "Detect My Connection",
+    "checkIpButton": "Check IP",
+    "ipPlaceholder": "Enter IP address (e.g., 8.8.8.8)",
+    "orText": "OR",
+    "checkAnyIpText": "Check any IP address"
+  },
+  "loadingState": {
+    "text": "Analyzing your connection..."
+  },
+  "errorState": {
+    "text": "Failed to detect connection. Please try again."
+  },
+  "resultsSection": {
+    "ipInformation": {
+      "title": "IP Information",
+      "ipAddressLabel": "IP Address",
+      "ispLabel": "ISP"
+    },
+    "location": {
+      "title": "Location",
+      "countryLabel": "Country",
+      "cityLabel": "City",
+      "timezoneLabel": "Timezone"
+    },
+    "connectionAnalysis": {
+      "title": "Connection Analysis",
+      "mobileLabel": "Mobile",
+      "vpnLabel": "VPN",
+      "torLabel": "Tor",
+      "proxyLabel": "Proxy",
+      "datacenterLabel": "Datacenter"
+    },
+    "riskScore": {
+      "title": "Overall Risk Score"
+    }
+  },
+  "howToUseSection": {
+    "title": "How to Use Proxy Detector Tool",
+    "subtitle": "Follow these simple steps to check if your connection is using a VPN, Proxy, or Tor network. Our tool provides instant results with detailed analysis.",
+    "steps": [
+      {
+        "number": 1,
+        "color": "blue",
+        "title": "Check Your Current Connection",
+        "description": "Click the \"Detect My Connection\" button to analyze your current IP address and connection type.",
+        "features": [
+          "Instant detection of your real IP address",
+          "Identifies your ISP and location",
+          "Checks for VPN, Proxy, or Tor usage",
+          "No registration or login required"
+        ]
+      },
+      {
+        "number": 2,
+        "color": "green",
+        "title": "Check Any IP Address",
+        "description": "Enter any IP address in the input field to check if it's using a proxy or VPN service.",
+        "features": [
+          "Supports both IPv4 and IPv6 addresses",
+          "Verify suspicious IP addresses",
+          "Check competitor's proxy usage",
+          "Press Enter for quick results"
+        ]
+      },
+      {
+        "number": 3,
+        "color": "purple",
+        "title": "Analyze the Results",
+        "description": "Review comprehensive information about the IP address including location, ISP, and risk analysis.",
+        "features": [
+          "View detailed IP information",
+          "Check geographic location data",
+          "See connection type analysis",
+          "Review overall risk score"
+        ]
+      },
+      {
+        "number": 4,
+        "color": "orange",
+        "title": "Understand Detection Types",
+        "description": "Learn what each detection type means and how it affects your online privacy and security.",
+        "features": [
+          "VPN: Virtual Private Network detection",
+          "Proxy: Proxy server identification",
+          "Tor: Tor network detection",
+          "Datacenter: Datacenter IP detection"
+        ]
+      }
+    ],
+    "proTips": {
+      "title": "Pro Tips for Best Results",
+      "tips": [
+        {
+          "icon": "speed",
+          "color": "blue",
+          "title": "Fast Detection",
+          "description": "Results appear in seconds with real-time analysis"
+        },
+        {
+          "icon": "verified_user",
+          "color": "green",
+          "title": "Accurate Data",
+          "description": "Powered by reliable IP intelligence database"
+        },
+        {
+          "icon": "privacy_tip",
+          "color": "purple",
+          "title": "Privacy First",
+          "description": "We don't store or log any IP addresses"
+        }
+      ]
+    }
+  },
+  "detectionTypesSection": {
+    "title": "Understanding the Detection Results",
+    "types": [
+      {
+        "icon": "vpn_lock",
+        "title": "VPN Detection",
+        "description": "Identifies if you're using a Virtual Private Network to mask your real IP address.",
+        "indicatorsTitle": "Common VPN indicators",
+        "indicators": [
+          "IP belongs to known VPN provider",
+          "Unusual geographic routing",
+          "Commercial VPN service patterns"
+        ]
+      },
+      {
+        "icon": "dns",
+        "title": "Proxy Detection",
+        "description": "Checks if your connection is routed through a proxy server.",
+        "indicatorsTitle": "Proxy types detected",
+        "indicators": [
+          "HTTP/HTTPS proxies",
+          "SOCKS proxies",
+          "Transparent proxies"
+        ]
+      },
+      {
+        "icon": "security",
+        "title": "Tor Detection",
+        "description": "Determines if you're using the Tor network for anonymous browsing.",
+        "indicatorsTitle": "Tor network features",
+        "indicators": [
+          "Exit node identification",
+          "Onion routing detection",
+          "Anonymous browsing patterns"
+        ]
+      },
+      {
+        "icon": "storage",
+        "title": "Datacenter Detection",
+        "description": "Identifies if your IP originates from a datacenter rather than a residential ISP.",
+        "indicatorsTitle": "Datacenter indicators",
+        "indicators": [
+          "Hosting provider IPs",
+          "Cloud service addresses",
+          "Server farm locations"
+        ]
+      }
+    ]
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What is a proxy detector tool?",
+        "answer": "A proxy detector tool is an online service that analyzes IP addresses to determine if they are using proxy servers, VPNs, or Tor networks. It helps identify masked connections and provides detailed information about the IP's origin, location, and connection type."
+      },
+      {
+        "question": "How accurate is the proxy detection?",
+        "answer": "Our proxy detector uses advanced IP intelligence databases and real-time analysis to provide highly accurate results. The detection accuracy is typically above 95% for identifying VPNs, proxies, and Tor connections. However, some sophisticated proxy services may occasionally evade detection."
+      },
+      {
+        "question": "Can I check any IP address?",
+        "answer": "Yes! You can check any public IP address (both IPv4 and IPv6) using our tool. Simply enter the IP address in the input field and click \"Check IP\" to get detailed analysis including proxy detection, location information, and risk assessment."
+      },
+      {
+        "question": "Is my data stored or logged?",
+        "answer": "No, we prioritize your privacy. We do not store, log, or track any IP addresses that you check using our tool. All queries are processed in real-time and no personal data is retained on our servers."
+      },
+      {
+        "question": "What is the risk score?",
+        "answer": "The risk score is a numerical value (0-100) that indicates the likelihood of suspicious or fraudulent activity associated with an IP address. A score of 0 means clean connection, while higher scores indicate potential risks such as VPN usage, proxy servers, or datacenter IPs."
+      },
+      {
+        "question": "Why would I need to detect proxies?",
+        "answer": "Proxy detection is useful for various purposes: preventing fraud, enforcing geographic restrictions, identifying bot traffic, verifying user authenticity, protecting against account abuse, and ensuring compliance with regional content licensing agreements."
+      }
+    ]
+  },
+  "ads": []
+}

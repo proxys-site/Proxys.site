@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Build Output
+_site/
+dist/
+
+# Environment Variables & Secrets
+.env
+.DS_Store
+
+# User Specific / Admin Directories (NOT Open Source)
+django-admin/
+admin/
+New folder/
+
+# Local Automation Scripts & Logs
+*.bat
+*.py
+*.log
+wget-log
+update_proxies.js
+generate_redirects.js
+update_templates.py
+
+# Generated/Leftover HTML in root (Source is in src/)
+index.html
+mobile-proxies.html
+proxy-detector.html
+admin-simple.html
+
+# Junk / Temporary Files
+New Text Document.txt
+practice.txt
+SUCCESS.txt
+data file
+data file*
+data
+temp-css.txt
+deployres
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE settings
+.vscode/
+.idea/src/assets/css/styles.css

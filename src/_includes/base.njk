@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% if env.gtmId %}
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','{{ env.gtmId }}');</script>
+  <!-- End Google Tag Manager -->
+  {% endif %}
+
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  
+  {# Get metadata from centralized seo.json #}
+  {%- set pageSlug = page.fileSlug or 'index' -%}
+  {%- set pageKey = pageMetaMapping[pageSlug] or pageSlug -%}
+  {%- set seoData = seo[pageKey] or seo.default or {} -%}
+  {%- set defaultSeo = seo.default or {} -%}
+  
+  {%- set finalTitle = seoData.title or defaultSeo.title -%}
+  {%- set finalDesc = seoData.description or defaultSeo.description -%}
+  {%- set finalKeywords = seoData.keywords or defaultSeo.keywords -%}
+  {%- set finalOgTitle = seoData.ogTitle or finalTitle -%}
+  {%- set finalOgDesc = seoData.ogDescription or finalDesc -%}
+  {%- set finalOgImage = seoData.ogImage or defaultSeo.ogImage or '/assets/logo.png' -%}
+  {%- set canonicalUrl = site.url + (page.url | url) -%}
+
+  <title>{{ finalTitle }}</title>
+  <meta name="description" content="{{ finalDesc }}"/>
+  {%- if finalKeywords %}
+  <meta name="keywords" content="{{ finalKeywords }}"/>
+  {%- endif %}
+  <link rel="canonical" href="{{ canonicalUrl }}" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:title" content="{{ finalOgTitle }}" />
+  <meta property="og:description" content="{{ finalOgDesc }}" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="{{ canonicalUrl }}" />
+  <meta property="og:image" content="{{ site.url }}{{ finalOgImage }}" />
+  <meta property="og:image:alt" content="{{ finalTitle }}" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="{{ seoData.twitterCard or defaultSeo.twitterCard or 'summary_large_image' }}"/>
+  <meta name="twitter:title" content="{{ finalOgTitle }}" />
+  <meta name="twitter:description" content="{{ finalOgDesc }}" />
+  <meta name="twitter:image" content="{{ site.url }}{{ finalOgImage }}" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="120x120" href="/assets/favicon-120x120.png">
+  <link rel="icon" href="/assets/favicon.ico">
+  
+  <link rel="preload" href="/assets/fonts/material/material-icons.ttf" as="font" type="font/ttf" crossorigin>
+
+  <link href="/assets/css/styles.css" rel="stylesheet"/>
+  <link href="/assets/css/inter.css" rel="stylesheet"/>
+  <link href="/assets/css/material-icons.css" rel="stylesheet"/>
+  <link href="/css/style.css" rel="stylesheet"/>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ site.url }}/#organization",
+        "name": "{{ site.title }}",
+        "url": "{{ site.url }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.url }}/assets/logo.png"
+        },
+        "sameAs": [
+          "https://github.com/proxys-site",
+          "https://www.npmjs.com/~proxys.site"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "{{ canonicalUrl }}",
+        "url": "{{ canonicalUrl }}",
+        "name": "{{ finalTitle }}",
+        "description": "{{ finalDesc }}",
+        "isPartOf": {
+          "@id": "{{ site.url }}/#website"
+        },
+        "about": {
+          "@id": "{{ site.url }}/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Discount Code Styles */
+    .discount-code-badge {
+      background: #f3f4f6;
+      color: #1f2937;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+      display: inline;
+      margin: 0;
+      border: 1px solid #d1d5db;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    
+    .discount-code-badge:hover {
+      background: #e5e7eb;
+      border-color: #9ca3af;
+    }
+    
+    .dark .discount-code-badge {
+      background: #374151;
+      color: #f9fafb;
+      border-color: #4b5563;
+    }
+    
+    .dark .discount-code-badge:hover {
+      background: #4b5563;
+      border-color: #6b7280;
+    }
+    
+    .copy-code-btn {
+      background: #10B981;
+      color: white;
+      border: none;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-left: 6px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+      white-space: nowrap;
+    }
+    
+    .copy-code-btn:hover {
+      background: #059669;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(16, 185, 129, 0.5);
+    }
+    
+    .copy-code-btn:active {
+      transform: scale(0.95);
+    }
+    
+    .copy-code-btn.copied {
+      background: #10B981;
+      animation: pulse 0.5s ease;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    @keyframes slideIn {
+      from {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    /* Label Badges - Responsive One-Line Display */
+    .inline-flex.items-center.px-2\.5.py-0\.5.rounded-full,
+    .inline-flex.items-center.px-2.py-0\.5.rounded,
+    .inline-flex.items-center.px-1\.5.py-0\.5.rounded {
+      white-space: nowrap;
+      flex-shrink: 0;
+      display: inline-flex !important;
+    }
+    
+    /* Responsive text wrapping for ads */
+    .break-words {
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+    }
+    
+    /* Ensure minimum width for content */
+    .min-w-0 {
+      min-width: 0;
+    }
+    
+    /* Mobile responsive text sizing for labels */
+    @media (max-width: 640px) {
+      .inline-flex.items-center.px-2\.5.py-0\.5.rounded-full,
+      .inline-flex.items-center.px-2.py-0\.5.rounded,
+      .inline-flex.items-center.px-1\.5.py-0\.5.rounded {
+        font-size: 0.625rem;
+        padding: 0.125rem 0.375rem;
+        line-height: 1.2;
+      }
+      
+      /* Adjust heading with labels on mobile */
+      h2.text-xl.font-bold.flex.items-center.gap-2,
+      h3.text-base.font-bold.flex.flex-wrap.items-center.gap-2,
+      h3.text-sm.font-bold.flex.flex-wrap.items-center.gap-1\.5 {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      
+      /* Ensure icons don't shrink */
+      h2.text-xl.font-bold.flex.items-center.gap-2 svg,
+      h3.text-base.font-bold.flex.flex-wrap.items-center.gap-2 svg,
+      h3.text-sm.font-bold.flex.flex-wrap.items-center.gap-1\.5 svg {
+        flex-shrink: 0;
+      }
+      
+      /* Better text sizing on small screens */
+      .text-xs {
+        font-size: 0.6875rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .inline-flex.items-center.px-2\.5.py-0\.5.rounded-full,
+      .inline-flex.items-center.px-2.py-0\.5.rounded,
+      .inline-flex.items-center.px-1\.5.py-0\.5.rounded {
+        font-size: 0.5625rem;
+        padding: 0.1rem 0.3rem;
+      }
+    }
+    
+    /* Prevent overflow in ad containers */
+    .overflow-x-auto {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Best Offer Badge */
+    .best-offer-badge {
+      background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+    }
+    
+    {% if animatedBorder %}
+    .animated-border-card {
+      position: relative;
+      background: linear-gradient(white, white) padding-box,
+        linear-gradient(45deg, #3B82F6, #8B5CF6, #EC4899, #F59E0B, #10B981, #3B82F6) border-box;
+      border: 3px solid transparent;
+      animation: rotate-gradient 3s linear infinite;
+    }
+    .dark .animated-border-card {
+      background: linear-gradient(#1F2937, #1F2937) padding-box,
+        linear-gradient(45deg, #3B82F6, #8B5CF6, #EC4899, #F59E0B, #10B981, #3B82F6) border-box;
+    }
+    @keyframes rotate-gradient {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+    {% endif %}
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+  {% if env.gtmId %}
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ env.gtmId }}"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {% endif %}
+  {% include "header.njk" %}
+  {% include "nav.njk" %}
+  {% include "header-ads.njk" %}
+  
+  <main id="main-content" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    {{ content | safe }}
+  </main>
+  
+  {% include "footer.njk" %}
+  
+  <script>
+    // Dark mode initialization - runs before page renders
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    if (darkModeToggle) {
+      darkModeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    }
+    
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    
+    const detailsElements = document.querySelectorAll('details');
+    detailsElements.forEach((details) => {
+      details.addEventListener('toggle', (event) => {
+        const icon = details.querySelector('.material-icons');
+        if (details.open) {
+          icon.textContent = 'remove';
+        } else {
+          icon.textContent = 'add';
+        }
+      });
+    });
+    
+    // Discount code copy functionality
+    document.querySelectorAll('.discount-code-text').forEach(function(element) {
+      const text = element.textContent;
+      const match = text.match(/"([^"]*)"/);
+      
+      if (match && match[1]) {
+        const code = match[1];
+        const beforeQuote = text.substring(0, text.indexOf('"'));
+        const afterQuote = text.substring(text.lastIndexOf('"') + 1);
+        
+        element.innerHTML = beforeQuote + 
+          '<code class="discount-code-badge">' + code + '</code>' +
+          afterQuote +
+          '<button class="copy-code-btn" onclick="copyDiscountCode(\'' + code.replace(/'/g, "\\'") + '\', this)">📋 Copy</button>';
+      }
+    });
+  </script>
+  
+  <script>
+    function copyDiscountCode(code, button) {
+      navigator.clipboard.writeText(code).then(function() {
+        const originalHTML = button.innerHTML;
+        button.innerHTML = '✓ Copied!';
+        button.style.background = '#10B981';
+        
+        // Show notification
+        const notification = document.createElement('div');
+        notification.textContent = 'Discount code "' + code + '" copied!';
+        notification.style.cssText = 'position: fixed; top: 20px; right: 20px; background: #10B981; color: white; padding: 12px 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 9999; animation: slideIn 0.3s ease-out;';
+        document.body.appendChild(notification);
+        
+        setTimeout(function() {
+          button.innerHTML = originalHTML;
+          button.style.background = '';
+          notification.remove();
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Failed to copy:', err);
+        alert('Failed to copy code');
+      });
+    }
+
+    // Dropdown Logic
+    document.addEventListener('DOMContentLoaded', function() {
+      // Desktop
+      const desktopBtn = document.querySelector('.dropdown-btn');
+      const desktopMenu = document.querySelector('.dropdown-menu'); // This might pick up multiple if not careful
+      // We know there's only one desktop dropdown for now, but best to scope it
+      const desktopContainer = document.querySelector('.dropdown-container');
+
+      if (desktopContainer) {
+          const btn = desktopContainer.querySelector('.dropdown-btn');
+          const menu = desktopContainer.querySelector('.dropdown-menu');
+          
+          btn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              menu.classList.toggle('hidden');
+          });
+
+          // Close on click outside
+          document.addEventListener('click', (e) => {
+              if (!desktopContainer.contains(e.target)) {
+                  menu.classList.add('hidden');
+              }
+          });
+      }
+
+      // Mobile
+      const mobileBtn = document.getElementById('mobileSiteDropdownBtn');
+      const mobileMenu = document.getElementById('mobileSiteDropdownMenu');
+      if (mobileBtn && mobileMenu) {
+          mobileBtn.addEventListener('click', () => {
+              mobileMenu.classList.toggle('hidden');
+              const icon = mobileBtn.querySelector('.material-icons');
+              if (mobileMenu.classList.contains('hidden')) {
+                  icon.textContent = 'expand_more';
+              } else {
+                  icon.textContent = 'expand_less';
+              }
+          });
+      }
+    });
+  </script>
+</body>
+</html>

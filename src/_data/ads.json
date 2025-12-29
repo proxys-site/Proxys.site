@@ -1,0 +1,16 @@
+{
+    "_comment": "Ads Configuration",
+    "_lastUpdated": "2025-12-25",
+    "_version": "1.0",
+    "mobileProxiesAds": [],
+    "residentialProxiesAds": [],
+    "datacenterProxiesAds": [],
+    "anonymousProxiesAds": [],
+    "proxyBrowserAds": [],
+    "gamingProxiesAds": [],
+    "streamingProxiesAds": [],
+    "businessProxiesAds": [],
+    "privacyProxiesAds": [],
+    "vpnProxiesAds": [],
+    "freeProxySitesAds": []
+}

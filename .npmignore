@@ -1,0 +1,42 @@
+# Source directories and files to exclude from the NPM package
+# Note: npm automatically ignores .gitignore, .npmignore, and .DS_Store.
+# It automatically INCLUDES package.json, README, LICENSE.
+
+# Build & Dependencies
+_site/
+node_modules/
+
+# Secrets
+.env
+.env.sample
+
+# Admin & Tools
+django-admin/
+admin/
+New folder/
+*.bat
+*.py
+*.log
+wget-log
+
+# Root HTML garbage (keep source in src/)
+index.html
+mobile-proxies.html
+proxy-detector.html
+admin-simple.html
+
+# Junk Files
+New Text Document.txt
+practice.txt
+SUCCESS.txt
+data file
+data file*
+data
+temp-css.txt
+deployres
+.vscode/
+
+# We only want to publish the source files for an 11ty project usually, 
+# or a specific 'dist' folder if you were building a library.
+# Assuming you want to share the Eleventy source:
+src/assets/css/temp-css.txt

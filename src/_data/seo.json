@@ -1,0 +1,74 @@
+{
+    "default": {
+        "title": "Proxys.Site - Find the Perfect Proxy",
+        "description": "Find the Perfect Proxy for Your Needs. Compare top proxy providers and find the best solution for your requirements.",
+        "keywords": "proxy, residential proxy, datacenter proxy, mobile proxy, free proxy, proxy detector, vpn",
+        "ogImage": "/assets/logo.png",
+        "twitterCard": "summary_large_image"
+    },
+    "home": {
+        "title": "Proxys.Site - Find the Perfect Proxy",
+        "description": "Compare top proxy providers and find the best solution for your requirements. Residential, Datacenter, Mobile, and more.",
+        "ogTitle": "Proxys.Site - The Best Proxy Comparison Tool"
+    },
+    "mobile": {
+        "title": "Best Mobile Proxies 2026 - Proxys.Site",
+        "description": "Top rated mobile proxy providers. Real 4G/5G mobile IPs for automation, testing, and more.",
+        "keywords": "mobile proxies, 4g proxies, 5g proxies, instagram proxies, automation"
+    },
+    "residential": {
+        "title": "Best Residential Proxies 2026 - Proxys.Site",
+        "description": "Compare the best residential proxy providers. Real residential IPs for scraping, sneaker bots, and anonymity.",
+        "keywords": "residential proxies, rotating proxies, residential ip, sneaker proxies"
+    },
+    "datacenter": {
+        "title": "Best Datacenter Proxies 2026 - Proxys.Site",
+        "description": "High-speed datacenter proxies for bulk operations. Fast, reliable, and affordable datacenter IPs.",
+        "keywords": "datacenter proxies, fast proxies, cheap proxies, server proxies"
+    },
+    "anonymous": {
+        "title": "Best Anonymous Proxies 2026 - Proxys.Site",
+        "description": "Stay hidden online with top anonymous proxies. Protect your identity and browse securely.",
+        "keywords": "anonymous proxies, elite proxies, private browsing, hide ip"
+    },
+    "gaming": {
+        "title": "Best Gaming Proxies 2026 - Proxys.Site",
+        "description": "Low latency proxies for gaming. Reduce lag and bypass IP bans with optimized gaming proxies.",
+        "keywords": "gaming proxies, low ping proxies, game vpn, lag reduction"
+    },
+    "streaming": {
+        "title": "Best Streaming Proxies 2026 - Proxys.Site",
+        "description": "Access geo-restricted content with top streaming proxies. Watch Netflix, Hulu, BBC iPlayer from anywhere.",
+        "keywords": "streaming proxies, unblock netflix, geo-restriction bypass, video streaming"
+    },
+    "business": {
+        "title": "Best Business Proxies 2026 - Proxys.Site",
+        "description": "Enterprise-grade proxies for business intelligence, ad verification, and market research.",
+        "keywords": "business proxies, enterprise proxies, corporate proxies, ad verification"
+    },
+    "privacy": {
+        "title": "Best Privacy Proxies 2026 - Proxys.Site",
+        "description": "Maximize your online privacy with secure proxies. Encrypted connections and no-logs policies.",
+        "keywords": "privacy proxies, secure proxies, encrypted proxy, no logs"
+    },
+    "vpn": {
+        "title": "Best VPN Services 2026 - Proxys.Site",
+        "description": "Compare top VPN providers. Secure your connection and protect your privacy with a trusted VPN.",
+        "keywords": "best vpn, vpn review, secure vpn, fast vpn"
+    },
+    "free": {
+        "title": "Free Proxy Sites List 2026 - Proxys.Site",
+        "description": "Curated list of working free proxy sites. HTTP, HTTPS, SOCKS4, SOCKS5 free proxies.",
+        "keywords": "free proxy, free proxy list, proxy list, free ip"
+    },
+    "proxyBrowser": {
+        "title": "Best Antidetect Browsers 2026 - Proxys.Site",
+        "description": "Compare top antidetect browsers for multi-accounting. Manage multiple profiles securely.",
+        "keywords": "antidetect browser, multi-login, browser fingerprinting, adspower, dolphin anty"
+    },
+    "proxyDetector": {
+        "title": "Free Proxy Detector - Check IP Quality",
+        "description": "Check if your IP is a proxy, VPN, or Tor node. Analyze IP quality and fraud score.",
+        "keywords": "proxy detector, ip check, whois, ip quality, fraud score"
+    }
+}

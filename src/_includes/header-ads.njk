@@ -1,0 +1,26 @@
+{% if site.headerAd and site.headerAd.enabled %}
+<div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 border-b border-gray-200 dark:border-gray-700 py-3">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    {# Check if script code exists #}
+    {% if site.headerAd.script %}
+      {# Inject script/ad code #}
+      <div class="header-ad-script-container text-center overflow-x-auto">
+        {{ site.headerAd.script | safe }}
+      </div>
+    {% else %}
+      {# Show text/HTML content #}
+      <div class="flex flex-wrap items-center justify-center gap-2 text-sm sm:text-base">
+        {# Show custom "Sponsored By" text if provided, otherwise default #}
+        {% if site.headerAd.sponsoredBy %}
+          <span class="text-subtext-light dark:text-subtext-dark font-medium whitespace-nowrap">{{ site.headerAd.sponsoredBy }}</span>
+        {% else %}
+          <span class="text-subtext-light dark:text-subtext-dark font-medium whitespace-nowrap">Sponsored by:</span>
+        {% endif %}
+        <a href="{{ site.headerAd.url }}" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-blue-700 dark:hover:text-blue-400 font-semibold transition-colors break-words text-center">
+          {{ site.headerAd.text }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "title": "Find the Perfect Proxy for Your Needs",
+    "subtitle": "We've analyzed and compared the top proxy providers to help you make the best choice. Select a proxy type below to see our recommendations."
+  },
+  "proxyTypesSection": {
+    "title": "Choose your proxy type:"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "question": "What is a proxy server?",
+        "answer": "A proxy server acts as an intermediary for requests from clients seeking resources from other servers. A client connects to the proxy server, requesting some service, such as a file, connection, web page, or other resource available from a different server and the proxy server evaluates the request as a way to simplify and control its complexity."
+      },
+      {
+        "question": "What's the difference between residential and datacenter proxies?",
+        "answer": "Residential proxies are IP addresses provided by Internet Service Providers (ISPs) to homeowners. Datacenter proxies are not affiliated with ISPs; they are created in data centers and are not associated with a physical address."
+      },
+      {
+        "question": "Are proxies legal to use?",
+        "answer": "Yes, using proxies is legal. However, how you use them determines their legality. Using proxies for illegal activities is, of course, against the law."
+      },
+      {
+        "question": "How do I choose the right proxy for my needs?",
+        "answer": "The right proxy depends on your use case. For web scraping, residential or datacenter proxies are common. For anonymity, look into anonymous proxies. For gaming, low-latency gaming proxies are best. Our guides can help you choose."
+      },
+      {
+        "question": "Are free proxies safe to use?",
+        "answer": "Free proxies can be risky. They may be slow, unreliable, and could potentially monitor your data or inject ads. For sensitive tasks, it's highly recommended to use a paid, reputable proxy provider."
+      }
+    ]
+  },
+  "trustedProvidersSection": {
+    "title": "Trusted Proxy Providers",
+    "providers": [
+      {
+        "id": "bright-data",
+        "name": "Bright Data",
+        "logo": "/assets/images/providers/brightdata.svg",
+        "url": "https://brightdata.com"
+      },
+      {
+        "id": "oxylabs",
+        "name": "Oxylabs",
+        "logo": "/assets/images/providers/oxylabs.png",
+        "url": "https://oxylabs.io"
+      },
+      {
+        "id": "iproyal",
+        "name": "IPRoyal",
+        "logo": "/assets/images/providers/iproyal.webp",
+        "url": "https://iproyal.com"
+      },
+      {
+        "id": "webshare",
+        "name": "Webshare",
+        "logo": "/assets/images/providers/webshare.webp",
+        "url": "https://www.webshare.io"
+      },
+      {
+        "id": "decodo",
+        "name": "Decodo",
+        "logo": "/assets/images/providers/decodo.jpg",
+        "url": "https://decodo.com"
+      },
+      {
+        "id": "soax",
+        "name": "SOAX",
+        "logo": "/assets/images/providers/soax.jpg",
+        "url": "https://soax.com"
+      }
+    ]
+  },
+  "testimonialsSection": {
+    "title": "What Our Users Say",
+    "testimonials": [
+      {
+        "text": "Proxys.site helped me find the perfect residential proxy provider for my market research needs. Their detailed comparisons saved me hours of research!",
+        "author": "Michael T., Marketing Director"
+      },
+      {
+        "text": "As a developer, I needed reliable proxies for testing. The recommendations on Proxys.site were spot-on and I found exactly what I needed within minutes.",
+        "author": "Sarah L., Software Engineer"
+      },
+      {
+        "text": "The comprehensive reviews helped me understand the differences between proxy types and choose the right one for my business. Highly recommended!",
+        "author": "David K., E-commerce Owner"
+      }
+    ]
+  },
+  "ads": []
+}
