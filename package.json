@@ -24,10 +24,10 @@
   "homepage": "https://proxys.site",
   "repository": {
     "type": "git",
-    "url": "https://github.com/proxys-site/open-source.git"
+    "url": "https://github.com/proxys-site/Proxys.site.git"
   },
   "bugs": {
-    "url": "https://github.com/proxys-site/open-source/issues"
+    "url": "https://github.com/proxys-site/Proxys.site/issues"
   },
   "funding": {
     "type": "individual",
