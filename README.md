@@ -26,6 +26,8 @@ Whether you are looking for [Residential Proxies](https://proxys.site/residentia
 *   **Templating**: Nunjucks (.njk)
 *   **Package Management**: NPM
 
+> 🌟 **Supported by:** [Evomi](https://evomi.com) - The #1 Ecosystem for Residential, Mobile & Datacenter Proxies.
+
 ## 🏁 Getting Started
 
 Follow these steps to set up the project locally on your machine.
