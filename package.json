@@ -1,6 +1,6 @@
 {
   "name": "proxys-site",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The official open-source codebase for Proxys.Site - A comprehensive proxy comparison tool and list.",
   "scripts": {
     "start": "npm run dev",
@@ -47,3 +47,4 @@
   }
 
 }
+
